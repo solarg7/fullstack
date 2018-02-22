@@ -143,7 +143,7 @@
       <hr>
       <footer class="footer">
         <div class="container">
-          <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+          <p><a href="/api/friends">API Friends Link</a> | <a href="https://github.com/solarg7/fullstack.git">GitHub Repo</a></p>
         </div>
       </footer>
   
@@ -220,7 +220,7 @@
 
     // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
     $.ajax({ url: currentURL + "/api/friends", method: "GET" })
-    .then(function(friendsData, friendIndex) {
+    .then(function(friendsData) {
 
       // Here we are logging the URL so we have access to it for troubleshooting
       console.log("------------------------------------");
@@ -230,9 +230,14 @@
       // Here we then log the NYTData to console, where it will show up as an object.
       console.log(friendsData);
       console.log("------------------------------------");
-
+      var sumasMinor = 50;
       var friendIndex = 0;
+
+      console.log("control HI2");
+      
       for( i = 0; i < friendsData.length - 1; i++){
+
+        console.log("control HI");
         var sumas = 0;
         for ( q = 0; q < 9; q++){
             var diff = Math.abs(parseInt(friendsData[i].scores[q]) - parseInt(friendsData[friendsData.length - 1].scores[q]));
@@ -241,10 +246,13 @@
         if(sumas < sumasMinor) {
           sumasMinor = sumas;
           friendIndex = i;
+          
         }
         
       }
-      $("#match-name").html(friendsData[0].scores[0]);
+
+      
+      $("#match-name").html(friendsData[friendIndex].name);
       //$("#match-name").html(friendsData[0].scores[0]);
 
     });
