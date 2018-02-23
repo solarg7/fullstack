@@ -8,7 +8,7 @@
 var tableArray = [
     {
     "name":"Ahmed",
-    "photo":"https://goo.gl/images/ZvqH1t",
+    "photo":"https://static.pexels.com/photos/103123/pexels-photo-103123.jpeg",
     "scores":[
         5,
         1,
@@ -39,7 +39,7 @@ var tableArray = [
     },
     {
     "name": "manowar",
-    "photo": "https://www.pexels.com/photo/man-young-happy-smiling-91227/",
+    "photo": "https://static.pexels.com/photos/346796/pexels-photo-346796.jpeg",
     "scores": [
     "2",
     "3",
