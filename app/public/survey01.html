@@ -198,7 +198,10 @@
         $.post("/api/friends", userData, function(data) {
   
             if (data){
+              
               $("#results-modal").modal();
+              runResult();
+
             }
             else {
                 alert("something is missing");
@@ -211,7 +214,7 @@
          
     }); 
     
-    runResult();
+    
     function runResult() {
 
     // Here we get the location of the root page.
@@ -234,6 +237,8 @@
       var friendIndex = 0;
 
       console.log("control HI2");
+
+      console.log(friendsData.length);
       
       for( i = 0; i < friendsData.length - 1; i++){
 
@@ -253,6 +258,8 @@
 
       
       $("#match-name").html(friendsData[friendIndex].name);
+    
+      $("#match-img").attr("src", friendsData[friendIndex].photo);
       //$("#match-name").html(friendsData[0].scores[0]);
 
     });

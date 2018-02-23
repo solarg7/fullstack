@@ -21,7 +21,38 @@ var tableArray = [
         4,
         1
         ]
+    },
+    {
+    "name": "kiss",
+    "photo": "https://static.pexels.com/photos/324658/pexels-photo-324658.jpeg",
+    "scores": [
+    "2",
+    "3",
+    "2",
+    "2",
+    "2",
+    "2",
+    "1",
+    "1",
+    "1"
+    ]
+    },
+    {
+    "name": "manowar",
+    "photo": "https://www.pexels.com/photo/man-young-happy-smiling-91227/",
+    "scores": [
+    "2",
+    "3",
+    "2",
+    "2",
+    "2",
+    "4",
+    "3",
+    "1",
+    "1"
+    ]
     }
+
   ];
   
   // Note how we export the array. This makes it accessible to other files using require.
